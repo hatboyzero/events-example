@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EventTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="LiR-fp-xOF" customClass="EventTableCell" customModule="Events" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LiR-fp-xOF" id="CLi-1n-hOt">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-du-Eo5">
+                        <rect key="frame" x="164" y="242" width="47" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Lorem ipsum dolor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PC-F6-SZl">
+                        <rect key="frame" x="16" y="271" width="343" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sf-CI-ZVc">
+                        <rect key="frame" x="16" y="41" width="343" height="193"/>
+                        <color key="backgroundColor" red="0.69019607839999997" green="0.69803921570000005" blue="0.70588235290000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6sf-CI-ZVc" secondAttribute="height" multiplier="16:9" id="eFK-Bg-dd4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1C-Wv-HA3">
+                        <rect key="frame" x="16" y="11" width="48" height="22"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="s1C-Wv-HA3" firstAttribute="leading" secondItem="CLi-1n-hOt" secondAttribute="leadingMargin" id="0iQ-cZ-yDx"/>
+                    <constraint firstItem="2PC-F6-SZl" firstAttribute="leading" secondItem="CLi-1n-hOt" secondAttribute="leadingMargin" id="2wi-lu-bko"/>
+                    <constraint firstItem="6sf-CI-ZVc" firstAttribute="leading" secondItem="CLi-1n-hOt" secondAttribute="leadingMargin" id="4So-yZ-4b8"/>
+                    <constraint firstItem="6sf-CI-ZVc" firstAttribute="top" secondItem="s1C-Wv-HA3" secondAttribute="bottom" constant="8" id="CiM-3m-fbO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2PC-F6-SZl" secondAttribute="bottom" id="HYA-VE-9mk"/>
+                    <constraint firstItem="YWb-du-Eo5" firstAttribute="top" secondItem="6sf-CI-ZVc" secondAttribute="bottom" constant="8" id="Lao-HR-3ID"/>
+                    <constraint firstItem="YWb-du-Eo5" firstAttribute="centerX" secondItem="CLi-1n-hOt" secondAttribute="centerX" id="bp8-gN-3jm"/>
+                    <constraint firstItem="6sf-CI-ZVc" firstAttribute="trailing" secondItem="CLi-1n-hOt" secondAttribute="trailingMargin" id="eCu-rY-DhE"/>
+                    <constraint firstItem="2PC-F6-SZl" firstAttribute="top" secondItem="YWb-du-Eo5" secondAttribute="bottom" constant="8" id="mwI-gv-uKr"/>
+                    <constraint firstItem="s1C-Wv-HA3" firstAttribute="top" secondItem="CLi-1n-hOt" secondAttribute="topMargin" id="oGE-gR-njV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2PC-F6-SZl" secondAttribute="trailing" id="roi-Uv-mOV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="eventDescription" destination="2PC-F6-SZl" id="ivu-Fw-g6o"/>
+                <outlet property="location" destination="s1C-Wv-HA3" id="v4Z-cO-zqm"/>
+                <outlet property="name" destination="YWb-du-Eo5" id="q9U-dx-LOA"/>
+                <outlet property="thumbnail" destination="6sf-CI-ZVc" id="IeT-ky-APm"/>
+            </connections>
+            <point key="canvasLocation" x="-294.5" y="-97"/>
+        </tableViewCell>
+    </objects>
+</document>
