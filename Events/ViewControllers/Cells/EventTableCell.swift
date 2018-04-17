@@ -4,7 +4,6 @@
 
 import UIKit
 import Reusable
-import Kingfisher
 
 final class EventTableCell: UITableViewCell, NibReusable {
     var apiManager: EventsApiCalls = EventsApiManager()
@@ -13,10 +12,6 @@ final class EventTableCell: UITableViewCell, NibReusable {
     @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var thumbnail: UIImageView!
-
-    static func height() -> CGFloat {
-        return 120
-    }
 
     func setup(item: Event) {
         self.name.text = item.name

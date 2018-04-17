@@ -6,6 +6,7 @@ target 'Events' do
   use_frameworks!
 
   # Pods for Events
+  pod 'SwiftGen'
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'Moya'
@@ -14,7 +15,8 @@ target 'Events' do
   pod 'SDWebImage'
   pod 'Dollar'
   pod 'Kingfisher'
-  pod 'Reusable'  
+  pod 'Reusable'
+  pod 'ImageSlideshow', '~> 1.5'
 
   target 'EventsTests' do
     inherit! :search_paths

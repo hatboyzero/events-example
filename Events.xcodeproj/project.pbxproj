@@ -15,18 +15,23 @@
 		095C696E20858BAB00946562 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C696D20858BAB00946562 /* EventsTests.swift */; };
 		095C697920858BAB00946562 /* EventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C697820858BAB00946562 /* EventsUITests.swift */; };
 		097CB9DD20864ABD00D0290F /* EventTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 097CB9DC20864ABD00D0290F /* EventTableCell.xib */; };
+		097CB9DF2086691A00D0290F /* CommentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 097CB9DE2086691A00D0290F /* CommentTableCell.xib */; };
 		4454DDD5AE1CD0B1DC46EB5F /* Pods_EventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3731D199E86BAE2814D250 /* Pods_EventsTests.framework */; };
 		532D1AA807C71CD34031E828 /* Pods_EventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B0A4DFBF67DA6FD3FF3023 /* Pods_EventsUITests.framework */; };
 		6308C08B78BBCCFF5F97C6C6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C684DFF6344DC6561302 /* Comment.swift */; };
+		6308C10AEAE07D6D40CFEF4C /* CommentsTableDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C260699B6FB6495B68DF /* CommentsTableDatasource.swift */; };
 		6308C1F460255FDA2A6E8A89 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308CB7F4FB380C47589F267 /* EventViewController.swift */; };
 		6308C20640CDF290E71E2188 /* EventTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C1DD7060561B7A8A2C5F /* EventTableCell.swift */; };
+		6308C36E50C032B3DDB81A81 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308CA71CD853BFF9CA6CD79 /* Storyboard.swift */; };
 		6308C44654B57C61FCCC3E20 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C633E655EA8DEF023F2A /* Location.swift */; };
 		6308C6E7B51F2F80B0EFC106 /* EventsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C72D509B3F19B54A46FB /* EventsDatasource.swift */; };
 		6308C70A2436F4F3C7EA1579 /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C35B387F64968D667799 /* Medium.swift */; };
 		6308C73527FF3A1B5664A137 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C1C0B00948EDD82CA941 /* Event.swift */; };
+		6308C7CF03EBE41E60D2F75B /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C2C38199FE7E8D1E2F0A /* CommentTableCell.swift */; };
 		6308CAAC8DCA0E50AD5EE455 /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C409718A8BCB8BDB1381 /* EventsApi.swift */; };
 		6308CC508DB9AC8B52BD98E3 /* EventsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C42D70DE61FB5E9F659B /* EventsApiManager.swift */; };
 		6308CD548A2F6198A83CE383 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C99B5B5FB71F0D463051 /* Status.swift */; };
+		6308CF1F9B5B4C39CF07FC89 /* ApiImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308CAD8021B7FBEC83EE1D8 /* ApiImageSource.swift */; };
 		6308CFE1F061D915E822CADE /* ItemsTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308C686990C6943541EACCE /* ItemsTableViewDatasource.swift */; };
 		6308CFE23BA795C20F4D7597 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308CFFBAB3F965FC18AF97A /* EventsViewController.swift */; };
 		F690E951780807DBDE9E332C /* Pods_Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1016E392FAB400B584848C9 /* Pods_Events.framework */; };
@@ -64,11 +69,14 @@
 		095C697820858BAB00946562 /* EventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUITests.swift; sourceTree = "<group>"; };
 		095C697A20858BAB00946562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		097CB9DC20864ABD00D0290F /* EventTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableCell.xib; sourceTree = "<group>"; };
+		097CB9DE2086691A00D0290F /* CommentTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableCell.xib; sourceTree = "<group>"; };
 		1E141B089981D6DE399E39B9 /* Pods-EventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventsTests/Pods-EventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A7E64144270762EE6F2E0DE /* Pods-EventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventsUITests/Pods-EventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FC39B1C57B64D46501479C5 /* Pods-Events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Events/Pods-Events.debug.xcconfig"; sourceTree = "<group>"; };
 		6308C1C0B00948EDD82CA941 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		6308C1DD7060561B7A8A2C5F /* EventTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableCell.swift; sourceTree = "<group>"; };
+		6308C260699B6FB6495B68DF /* CommentsTableDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableDatasource.swift; sourceTree = "<group>"; };
+		6308C2C38199FE7E8D1E2F0A /* CommentTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
 		6308C35B387F64968D667799 /* Medium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medium.swift; sourceTree = "<group>"; };
 		6308C409718A8BCB8BDB1381 /* EventsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsApi.swift; sourceTree = "<group>"; };
 		6308C42D70DE61FB5E9F659B /* EventsApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsApiManager.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 		6308C686990C6943541EACCE /* ItemsTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewDatasource.swift; sourceTree = "<group>"; };
 		6308C72D509B3F19B54A46FB /* EventsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsDatasource.swift; sourceTree = "<group>"; };
 		6308C99B5B5FB71F0D463051 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		6308CA71CD853BFF9CA6CD79 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		6308CAD8021B7FBEC83EE1D8 /* ApiImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiImageSource.swift; sourceTree = "<group>"; };
 		6308CB7F4FB380C47589F267 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		6308CFFBAB3F965FC18AF97A /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		64B0A4DFBF67DA6FD3FF3023 /* Pods_EventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +171,9 @@
 				6308CEA0FEDA252AEA348EAF /* ViewControllers */,
 				6308CDB45C56BC7EDED1919E /* Datasources */,
 				097CB9DC20864ABD00D0290F /* EventTableCell.xib */,
+				6308C960227D97CF202174D6 /* Utility */,
+				097CB9DE2086691A00D0290F /* CommentTableCell.xib */,
+				6308CA71CD853BFF9CA6CD79 /* Storyboard.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -204,11 +217,20 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		6308C960227D97CF202174D6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6308CAD8021B7FBEC83EE1D8 /* ApiImageSource.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		6308CDB45C56BC7EDED1919E /* Datasources */ = {
 			isa = PBXGroup;
 			children = (
 				6308C72D509B3F19B54A46FB /* EventsDatasource.swift */,
 				6308C686990C6943541EACCE /* ItemsTableViewDatasource.swift */,
+				6308C260699B6FB6495B68DF /* CommentsTableDatasource.swift */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -227,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				6308C1DD7060561B7A8A2C5F /* EventTableCell.swift */,
+				6308C2C38199FE7E8D1E2F0A /* CommentTableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -256,6 +279,7 @@
 				095C695220858BA800946562 /* Frameworks */,
 				095C695320858BA800946562 /* Resources */,
 				516913D2552AEF7C4068716E /* [CP] Embed Pods Frameworks */,
+				097CB9E020866CB800D0290F /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -352,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				095C696320858BAB00946562 /* LaunchScreen.storyboard in Resources */,
+				097CB9DF2086691A00D0290F /* CommentTableCell.xib in Resources */,
 				097CB9DD20864ABD00D0290F /* EventTableCell.xib in Resources */,
 				095C696020858BAB00946562 /* Assets.xcassets in Resources */,
 				095C695E20858BA800946562 /* Main.storyboard in Resources */,
@@ -375,6 +400,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		097CB9E020866CB800D0290F /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift4 $SOURCE_ROOT/Events --output $SOURCE_ROOT/Events/Storyboard.swift";
+		};
 		516913D2552AEF7C4068716E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +423,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Events/Pods-Events-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Dollar/Dollar.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
@@ -398,6 +438,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dollar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
@@ -488,6 +529,10 @@
 				6308C6E7B51F2F80B0EFC106 /* EventsDatasource.swift in Sources */,
 				6308CFE1F061D915E822CADE /* ItemsTableViewDatasource.swift in Sources */,
 				6308C20640CDF290E71E2188 /* EventTableCell.swift in Sources */,
+				6308CF1F9B5B4C39CF07FC89 /* ApiImageSource.swift in Sources */,
+				6308C10AEAE07D6D40CFEF4C /* CommentsTableDatasource.swift in Sources */,
+				6308C7CF03EBE41E60D2F75B /* CommentTableCell.swift in Sources */,
+				6308C36E50C032B3DDB81A81 /* Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

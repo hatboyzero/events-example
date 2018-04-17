@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.7.2)
   - Dollar (7.1.0)
+  - ImageSlideshow (1.5.2):
+    - ImageSlideshow/Core (= 1.5.2)
+  - ImageSlideshow/Core (1.5.2)
   - Kingfisher (4.7.0)
   - Moya (10.0.2):
     - Moya/Core (= 10.0.2)
@@ -30,9 +33,11 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - SwiftGen (5.3.0)
 
 DEPENDENCIES:
   - Dollar
+  - ImageSlideshow (~> 1.5)
   - Kingfisher
   - Moya
   - Moya-ObjectMapper/RxSwift
@@ -41,11 +46,13 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SDWebImage
+  - SwiftGen
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Dollar
+    - ImageSlideshow
     - Kingfisher
     - Moya
     - Moya-ObjectMapper
@@ -55,10 +62,12 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SDWebImage
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Dollar: dc69a2997fa5df12ae7a91fec897963664c26750
+  ImageSlideshow: f354701b9b4a6dbec4c3bef022bcfe3188e1fdab
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   Moya-ObjectMapper: 167adf69db0298bf3a19ea05cb9a16ee117c8ef5
@@ -68,7 +77,8 @@ SPEC CHECKSUMS:
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
 
-PODFILE CHECKSUM: fbe643b664421f9f2ba77c2814c281bcee759f82
+PODFILE CHECKSUM: 3522164c44cedff63630ce1e840e93c1965c4942
 
 COCOAPODS: 1.5.0

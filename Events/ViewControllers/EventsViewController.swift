@@ -76,7 +76,13 @@ extension EventsViewController {
 
 extension EventsViewController: EventsDelegate {
     func didSelectEvent(at index: IndexPath) {
+        guard let nextController = StoryboardScene.Main.eventViewController.instantiate() as? EventViewController else {
+            return
+        }
+
         self.tableView.deselectRow(at: index, animated: true)
-        // TODO View selected event
+        let event = self.events[index.row]
+        nextController.event = event
+        self.navigationController?.pushViewController(nextController, animated: true)
     }
 }

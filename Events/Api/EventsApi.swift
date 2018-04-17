@@ -87,7 +87,7 @@ extension EventsApi: TargetType {
     }
 
     var headers: [String: String]? {
-        return nil
+        return ["Content-Type": "application/json"]
     }
 }
 
