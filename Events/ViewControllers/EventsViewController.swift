@@ -31,12 +31,11 @@ extension EventsViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 350
         setupTableView(with: events)
+        refreshData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        refreshData()
 
         self.title = "Events"
     }

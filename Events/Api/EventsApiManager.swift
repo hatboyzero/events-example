@@ -8,6 +8,35 @@ import RxSwift
 import ObjectMapper
 import Moya_ObjectMapper
 
+final class EventsApiProvider<Target: TargetType>: MoyaProvider<Target> {
+
+    public init(
+        endpointClosure: @escaping EndpointClosure = MoyaProvider.defaultEndpointMapping,
+        requestClosure: @escaping RequestClosure = MoyaProvider.defaultRequestMapping,
+        stubClosure: @escaping StubClosure = MoyaProvider.neverStub,
+        manager: Manager = MoyaProvider<Target>.defaultAlamofireManager(),
+        plugins: [PluginType] = [],
+        trackInflights: Bool = false
+    ) {
+        super.init(
+            endpointClosure: endpointClosure,
+            requestClosure: { endpoint, closure in
+                var request = try! endpoint.urlRequest() //Feel free to embed proper error handling
+                if endpoint.url.range(of:"/status/") != nil {
+                    request.cachePolicy = .reloadIgnoringCacheData
+                } else {
+                    request.cachePolicy = .returnCacheDataElseLoad
+                }
+                closure(.success(request))
+            },
+            stubClosure: stubClosure,
+            manager: manager,
+            plugins: plugins,
+            trackInflights: trackInflights
+        )
+    }
+}
+
 extension Response {
     func removeAPIWrappers() -> Response {
         guard let json = try? self.mapJSON() as? [[String:AnyObject]],
@@ -25,9 +54,23 @@ extension Response {
 }
 
 struct EventsApiManager {
-    let provider = MoyaProvider<EventsApi>(plugins: [CredentialsPlugin {
-        _ -> URLCredential? in
-        return URLCredential(user: "testuser", password: "evalpass", persistence: .none)
+
+    let provider = EventsApiProvider<EventsApi>(plugins: [CredentialsPlugin {
+        target -> URLCredential? in
+        let protectionSpace = URLProtectionSpace.init(
+                host: "dev.dragonflyathletics.com",
+                port: 1337,
+                protocol: "http",
+                realm: nil,
+                authenticationMethod: nil)
+
+        if let userCredential = URLCredentialStorage.shared.defaultCredential(for: protectionSpace) {
+            return userCredential
+        }
+
+        let userCredential = URLCredential(user: "testuser", password: "evalpass", persistence: .permanent)
+        URLCredentialStorage.shared.setDefaultCredential(userCredential, for: protectionSpace)
+        return userCredential
     }])
 
     let disposeBag = DisposeBag()

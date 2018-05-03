@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,14 +34,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sf-CI-ZVc">
-                        <rect key="frame" x="16" y="41" width="343" height="193"/>
+                        <rect key="frame" x="16" y="41.5" width="343" height="192.5"/>
                         <color key="backgroundColor" red="0.69019607839999997" green="0.69803921570000005" blue="0.70588235290000001" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="6sf-CI-ZVc" secondAttribute="height" multiplier="16:9" id="eFK-Bg-dd4"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1C-Wv-HA3">
-                        <rect key="frame" x="16" y="11" width="48" height="22"/>
+                        <rect key="frame" x="16" y="11" width="48" height="22.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -48,17 +49,33 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="s1C-Wv-HA3" firstAttribute="leading" secondItem="CLi-1n-hOt" secondAttribute="leadingMargin" id="0iQ-cZ-yDx"/>
+                    <constraint firstItem="6sf-CI-ZVc" firstAttribute="width" secondItem="CLi-1n-hOt" secondAttribute="width" multiplier="0.65" id="2W8-hi-ec5"/>
                     <constraint firstItem="2PC-F6-SZl" firstAttribute="leading" secondItem="CLi-1n-hOt" secondAttribute="leadingMargin" id="2wi-lu-bko"/>
                     <constraint firstItem="6sf-CI-ZVc" firstAttribute="leading" secondItem="CLi-1n-hOt" secondAttribute="leadingMargin" id="4So-yZ-4b8"/>
                     <constraint firstItem="6sf-CI-ZVc" firstAttribute="top" secondItem="s1C-Wv-HA3" secondAttribute="bottom" constant="8" id="CiM-3m-fbO"/>
                     <constraint firstAttribute="bottomMargin" secondItem="2PC-F6-SZl" secondAttribute="bottom" id="HYA-VE-9mk"/>
                     <constraint firstItem="YWb-du-Eo5" firstAttribute="top" secondItem="6sf-CI-ZVc" secondAttribute="bottom" constant="8" id="Lao-HR-3ID"/>
+                    <constraint firstItem="6sf-CI-ZVc" firstAttribute="centerX" secondItem="CLi-1n-hOt" secondAttribute="centerX" id="OXZ-fA-lN1"/>
                     <constraint firstItem="YWb-du-Eo5" firstAttribute="centerX" secondItem="CLi-1n-hOt" secondAttribute="centerX" id="bp8-gN-3jm"/>
                     <constraint firstItem="6sf-CI-ZVc" firstAttribute="trailing" secondItem="CLi-1n-hOt" secondAttribute="trailingMargin" id="eCu-rY-DhE"/>
                     <constraint firstItem="2PC-F6-SZl" firstAttribute="top" secondItem="YWb-du-Eo5" secondAttribute="bottom" constant="8" id="mwI-gv-uKr"/>
                     <constraint firstItem="s1C-Wv-HA3" firstAttribute="top" secondItem="CLi-1n-hOt" secondAttribute="topMargin" id="oGE-gR-njV"/>
                     <constraint firstAttribute="trailingMargin" secondItem="2PC-F6-SZl" secondAttribute="trailing" id="roi-Uv-mOV"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="2W8-hi-ec5"/>
+                        <exclude reference="OXZ-fA-lN1"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=compact">
+                    <mask key="constraints">
+                        <include reference="2W8-hi-ec5"/>
+                        <exclude reference="4So-yZ-4b8"/>
+                        <include reference="OXZ-fA-lN1"/>
+                        <exclude reference="eCu-rY-DhE"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="eventDescription" destination="2PC-F6-SZl" id="ivu-Fw-g6o"/>

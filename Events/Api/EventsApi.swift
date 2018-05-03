@@ -87,7 +87,10 @@ extension EventsApi: TargetType {
     }
 
     var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+        return [
+            "Content-Type": "application/json",
+            "Cache-Control": "private"
+        ]
     }
 }
 
